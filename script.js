@@ -46,7 +46,7 @@ async function buscarNotebooks() {
 
   if (response.ok) {
     const data = await response.json();
-    exibirNotebooks(data.results.slice(0, 30)); // Pega no máximo 15 notebooks 
+    exibirNotebooks(data.results.slice(0, 30));
   } else {
     console.error('Erro na requisição:', response.status);
   }
