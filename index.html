@@ -14,35 +14,47 @@
               <div class="logo">
                      <img src="" alt="">
               </div>
-              <nav class="navbar">
-                     <ul>
-                          <li><a href="#">Home</a></li>
-                          <li><a href="#">Produtos</a></li>
-                          <li><a href="#">Contato</a></li>
-                          <li><a href="#">Sobre</a></li>
-                     </ul> 
-                     <div>
-                            
-    
-                     </div>
+                     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                            <div class="container-fluid">
+                              <a class="navbar-brand" href="#">Navbar</a>
+                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">Notebook</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">Notebook game</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link disabled" aria-disabled="true">Entra em contato</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </nav>
                    
-              </nav>
+       
         </header>
 
        <main>
               <!-- banner-->
-              <div class="w3-content w3-display-container">
-                     <img class="mySlides" src="img1.jpeg">
-                     <img class="mySlides" src="img2.jpeg">
-                     <img class="mySlides" src="img3.jpeg">
-                     <div class="w3-center w3-display-bottommiddle" style="width:100%">
-                       <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
-                       <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
-                       <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
-                       <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
-                       <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+              <div class="carousel-inner">
+                     <div class="carousel-item active">
+                         <img src="img1.jpeg" class="d-block w-100" alt="Imagem 1">
                      </div>
-                   </div>
+                     <div class="carousel-item">
+                         <img src="img2.jpeg" class="d-block w-100" alt="Imagem 2">
+                     </div>
+                     <div class="carousel-item">
+                         <img src="img3.jpeg" class="d-block w-100" alt="Imagem 3">
+                     </div>
+                 </div>
 
               <div class="container"> 
                      <div class="row"> <!-- Usaremos a classe row para organizar os cards em linhas -->
