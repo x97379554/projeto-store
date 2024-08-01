@@ -97,20 +97,3 @@ function exibirNotebooks(notebooks) {
 }
 // Chama a função para buscar os notebooks quando a página carregar
 window.onload = buscarNotebooks;
-const slides = document.querySelectorAll('#slideshow img');
-let currentSlide = 0;
-
-// Define a função para mostrar o próximo slide
-function showNextSlide() {
-  // Esconde o slide atual
-  slides[currentSlide].classList.remove('active');
-
-  // Calcula o índice do próximo slide
-  currentSlide = (currentSlide + 1) % slides.length;
-
-  // Exibe o próximo slide
-  slides[currentSlide].classList.add('active');
-}
-
-// Chama a função para mostrar o próximo slide a cada segundo
-setInterval(showNextSlide, 1000); // 1000 milissegundos = 1 segundo

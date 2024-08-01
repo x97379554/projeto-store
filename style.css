@@ -25,6 +25,7 @@
    
    /* Header */
    header {
+
        background-color: var(--cor1);
        padding: 2rem 0;
        display: flex;
@@ -59,18 +60,16 @@
        background-color: var(--cor4);
    }
    
-   /* Banner */
-   .banner {
-       width: 100%;
-       margin-top: 2rem;
-      
-   }
+.carousel-inner{
+       margin: 1rem;
+       max-height: 50%;
+
+}
    
-   .banner img {
+.carousel-inner img {
        filter: brightness(0.7); /* Adiciona um filtro de brilho para a imagem */
-       top: 0;
-       left: 0;
-       z-index: -1;
+       transition: filter 0.2s ease-in-out;
+       max-height: 30%;
    }
    
    
