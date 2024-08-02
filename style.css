@@ -1,4 +1,3 @@
-/* style.css */
 
 :root {
        --cor1: #074173; /* Azul Escuro */
@@ -60,18 +59,20 @@
        background-color: var(--cor4);
    }
    
-.carousel-inner{
-       margin: 1rem;
-       max-height: 50%;
-
-}
-   
-.carousel-inner img {
-       filter: brightness(0.7); /* Adiciona um filtro de brilho para a imagem */
-       transition: filter 0.2s ease-in-out;
-       max-height: 30%;
-   }
-   
+   .carousel-inner {
+       max-height: 400px; /* Defina a altura máxima desejada */
+       overflow: hidden; /* Oculta o excesso de imagem */
+       overflow: scroll; /* Oculta o excesso de imagem */;
+       margin-bottom: 1rem;
+     }
+     
+     .carousel-inner img {
+       object-fit: cover; /* Mantém a proporção da imagem */
+       height: 100%; /* Preenche a altura disponível */
+       width: 100%; /* Preenche a largura disponível */
+     }
+     
+     
    
    .card {
        border: none;

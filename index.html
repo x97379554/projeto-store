@@ -1,87 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>loja asass</title>
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-       <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loja asass</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-       
-       <!-- Navigation -->
-        <header>
-              <div class="logo">
-                     <img src="" alt="">
-              </div>
-                     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                            <div class="container-fluid">
-                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                              </button>
-                              <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="#">Notebook</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="#">Notebook game</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link disabled" aria-disabled="true">Entra em contato</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </nav>
-                   
-       
-        </header>
+  <!-- Navigation -->
+  <header>
+    <div class="logo">
+      <img src="imgs/logo.png" alt="Logo">
+    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Notebook</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Notebook game</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Entra em contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <img src="imgs/shopping_cart_icon.png" alt="">
+  </header>
 
-       <main>
-              <!-- banner-->
-              <div class="carousel-inner">
-                     <div class="carousel-item active">
-                         <img src="img1.jpeg" class="d-block w-100" alt="Imagem 1">
-                     </div>
-                     <div class="carousel-item">
-                         <img src="img2.jpeg" class="d-block w-100" alt="Imagem 2">
-                     </div>
-                     <div class="carousel-item">
-                         <img src="img3.jpeg" class="d-block w-100" alt="Imagem 3">
-                     </div>
-                 </div>
+  <main>
+    <!-- banner-->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imgs/img1.jpeg" class="d-block w-100" alt="Imagem 1">
+        </div>
+        <div class="carousel-item">
+          <img src="imgs/img2.jpeg" class="d-block w-100" alt="Imagem 2">
+        </div>
+        <div class="carousel-item">
+          <img src="imgs/img3.jpeg" class="d-block w-100" alt="Imagem 3">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
 
-              <div class="container"> 
-                     <div class="row"> <!-- Usaremos a classe row para organizar os cards em linhas -->
-                            <div class="card" style="width: 18rem;">
-                                   <img src="..." class="card-img-top" alt="...">
-                                   <div class="card-body">
-                                     <h5 class="card-title">nome Do noteboock</h5>
-                                     <p class="card-text"> Descrição do notebook </p>
-                                     <p class="card-text"> peço </p>
-                                     <a href="#" class="btn btn-primary"> comprar</a>
-                                   </div>
-                            </div>
-                     </div>
-                 </div>
+    <div class="container"> 
+      <div id="cards-container" class="row"></div>
+    </div>
+  </main>
 
+  <footer>
+    <p>Todos os direitos reservados</p>
+    <div>
+      <a href="#"><img src="" alt=""></a>
+    </div>
+  </footer>
 
-              
-
-
-
-
-
-              <footer>
-                     <p>Todos os direitos reservados</p>
-                     <div>
-                          <a href="#"><img src="" alt=""></a>
-              </footer>
-
-       <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBkIjzF1zk6FW9i3zUj0fFliDIB/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
