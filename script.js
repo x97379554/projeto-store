@@ -1,3 +1,5 @@
+let cart = [];
+
 // Função para buscar os notebooks
 async function buscarNotebooks() {
   const url = 'https://api.mercadolibre.com/sites/MLB/search?q=notebooks';
@@ -15,8 +17,7 @@ function exibirNotebooks(notebooks) {
   const row = document.querySelector('.row');
   row.innerHTML = ''; // Limpa o conteúdo anterior
 
-  for (let i = 0; i < notebooks.length; i++) {
-    const notebook = notebooks[i];
+  notebooks.forEach(notebook => {
     // Cria o card para cada notebook
     const card = document.createElement('div');
     card.classList.add('col-md-4', 'mb-4'); // Define a largura do card (col-md-4) e espaçamento (mb-4)
@@ -38,10 +39,10 @@ function exibirNotebooks(notebooks) {
     cardPrice.classList.add('card-text');
     cardPrice.textContent = `Preço: R$ ${notebook.price.toFixed(2)}`;
 
-    const comprarButton = document.createElement('a');
+    const comprarButton = document.createElement('button');
     comprarButton.classList.add('btn', 'btn-primary');
-    comprarButton.textContent = 'Comprar';
-    comprarButton.href = '#';
+    comprarButton.textContent = 'Adicionar ao Carrinho';
+    comprarButton.onclick = () => adicionarAoCarrinho(notebook);
 
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardPrice);
@@ -51,8 +52,49 @@ function exibirNotebooks(notebooks) {
 
     // Adiciona o card ao row
     row.appendChild(card);
-  }
+  });
+}
+
+function adicionarAoCarrinho(notebook) {
+  cart.push(notebook);
+  displayCartItems();
+}
+
+function displayCartItems() {
+  const cartItemsContainer = document.getElementById('cart-items');
+  cartItemsContainer.innerHTML = ''; // Limpa o conteúdo anterior
+
+  let total = 0;
+
+  cart.forEach(item => {
+    const itemElement = document.createElement('div');
+    itemElement.classList.add('cart-item');
+
+    const itemTitle = document.createElement('h5');
+    itemTitle.textContent = item.title;
+
+    const itemPrice = document.createElement('p');
+    itemPrice.textContent = `Preço: R$ ${item.price.toFixed(2)}`;
+
+    itemElement.appendChild(itemTitle);
+    itemElement.appendChild(itemPrice);
+    cartItemsContainer.appendChild(itemElement);
+
+    total += item.price;
+  });
+
+  const cartTotal = document.getElementById('cart-total');
+  cartTotal.textContent = `Total: R$ ${total.toFixed(2)}`;
+}
+
+function encerrarCompra() {
+  cart = [];
+  displayCartItems();
+  alert('Compra encerrada com sucesso!');
 }
 
 // Chama a função para buscar os notebooks quando a página carregar
 window.onload = buscarNotebooks;
+
+// Adiciona o evento ao botão "Encerrar Compra"
+document.getElementById('checkout-button').addEventListener('click', encerrarCompra);
