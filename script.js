@@ -44,7 +44,6 @@ function exibirNotebooks(notebooks) {
     comprarButton.href = '#';
 
     cardBody.appendChild(cardTitle);
-    cardBody.appendChild(cardText);
     cardBody.appendChild(cardPrice);
     cardBody.appendChild(comprarButton);
     card.appendChild(cardImg);

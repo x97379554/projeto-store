@@ -72,7 +72,9 @@
        width: 100%; /* Preenche a largura disponível */
      }
      
-     
+.cart{
+    margin-left: 63rem;
+}
    
    .card {
        border: none;
