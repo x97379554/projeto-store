@@ -1,147 +1,221 @@
-
 :root {
-       --cor1: #074173; 
-       --cor2: #1679AB; 
-       --cor3: #5DEBD7; 
-       --cor4: #C5FF95; 
-       --branco: #fff; 
-       --cinza-claro: #f4f4f4; 
-       --cinza-escuro: #ddd; 
-   }
-   
-   * {
-       padding: 0;
-       margin: 0;
-       box-sizing: border-box;
-       font-family: 'Arial', sans-serif;
-   }
-   
-   body {
-       background-color: var(--cor2);
-       color: var(--branco);
-       
+    --cor1: #074173;
+    --cor2: #1679AB;
+    --cor3: #5DEBD7;
+    --cor4: #C5FF95;
+    --branco: #fff;
+    --cinza-claro: #f4f4f4;
+    --cinza-escuro: #ddd;
 }
-   
-   /* Header */
-   header {
 
-       background-color: var(--cor1);
-       padding: 2rem 0;
-       display: flex;
-
-   }
-   
-   .logo {
-       display: flex;
-       align-items: center;
-       gap: 1rem;
-   }
-   
-   .logo img {
-       height: 50px;
-   }
-   
-   .logo h1 {
-       font-size: 1.5rem;
-       font-weight: bold;
-   }
-   
-   nav a {
-       text-decoration: none;
-       color: var(--branco);
-       font-weight: bold;
-       padding: 1rem 1.5rem;
-       border-radius: 0.5rem;
-       transition: background-color 0.3s ease;
-   }
-   
-   nav a:hover {
-       background-color: var(--cor4);
-   }
-   
-   .carousel-inner {
-       max-height: 400px; /* Defina a altura máxima desejada */
-       overflow: hidden; /* Oculta o excesso de imagem */
-       overflow: scroll; /* Oculta o excesso de imagem */;
-       margin-bottom: 1rem;
-     }
-     
-     .carousel-inner img {
-       object-fit: cover; /* Mantém a proporção da imagem */
-       height: 100%; /* Preenche a altura disponível */
-       width: 100%; /* Preenche a largura disponível */
-     }
-     
-.cart{
-    margin-left: 63rem;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
-   
-   .card {
-       border: none;
-       border-radius: 1rem;
-       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-       overflow: hidden;
-       transition: transform 0.2s ease-in-out;
-   }
-   
-   .card:hover {
-       transform: translateY(-5px);
-   }
-   
-   .card img {
-       width: 100%;
-       height: 200px;
-       object-fit: cover;
-   }
-   
-   .card-content {
-       padding: 1rem;
-       background-color: var(--branco);
-   }
-   
-   .card-content h3 {
-       font-size: 1.2rem;
-       margin-bottom: 0.5rem;
-   }
-   
-   .card-content p {
-       margin-bottom: 1rem;
-       color: var(--cinza-escuro);
-   }
-   
-   .card-content button {
-       background-color: var(--cor1);
-       color: var(--branco);
-       border: none;
-       padding: 0.8rem 1.5rem;
-       border-radius: 0.5rem;
-       cursor: pointer;
-       transition: background-color 0.3s ease;
-   }
-   
-   .card-content button:hover {
-       background-color: var(--cor4);
-   }
-   
-   /* Footer */
-   footer {
-       background-color: var(--cor1);
-       padding: 2rem 0;
-       text-align: center;
-   }
-   
-   footer p {
-       margin-bottom: 1rem;
-   }
-   
-   footer a {
-       text-decoration: none;
-       color: var(--branco);
-       font-weight: bold;
-       transition: color 0.3s ease;
-   }
-   
-   footer a:hover {
-       color: var(--cor4);
-   }
-   
+
+body {
+    background-color: var(--cor2);
+    color: var(--branco);
+}
+
+/* Header */
+header {
+    background-color: var(--cor1);
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--cor4);
+}
+
+.carousel-inner {
+    max-height: 400px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.cart {
+    margin-left: 5rem;
+    margin-right: 1rem;
+}
+
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+    background-color: var(--branco);
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    margin-bottom: 1rem;
+    color: var(--cinza-escuro);
+}
+
+.card-content button {
+    background-color: var(--cor1);
+    color: var(--branco);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+    background-color: var(--cor4);
+}
+
+/* Footer */
+footer {
+    background-color: var(--cor1);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--cor4);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .carousel-inner {
+        max-height: 300px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .card-content {
+        padding: 0.5rem;
+    }
+
+    .card-content h3 {
+        font-size: 1rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+
+    .card-content button {
+        padding: 0.6rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+    }
+
+    .carousel-inner {
+        max-height: 200px;
+    }
+
+    .card img {
+        height: 120px;
+    }
+
+    .card-content h3 {
+        font-size: 0.9rem;
+    }
+
+    .card-content p {
+        font-size: 0.8rem;
+    }
+
+    .card-content button {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 1rem 0;
+    }
+}
