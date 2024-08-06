@@ -1,12 +1,12 @@
 
 :root {
-       --cor1: #074173; /* Azul Escuro */
-       --cor2: #1679AB; /* Azul Claro */
-       --cor3: #5DEBD7; /* Azul Turquesa */
-       --cor4: #C5FF95; /* Verde Claro */
-       --branco: #fff; /* Branco */
-       --cinza-claro: #f4f4f4; /* Cinza Claro */
-       --cinza-escuro: #ddd; /* Cinza Escuro */
+       --cor1: #074173; 
+       --cor2: #1679AB; 
+       --cor3: #5DEBD7; 
+       --cor4: #C5FF95; 
+       --branco: #fff; 
+       --cinza-claro: #f4f4f4; 
+       --cinza-escuro: #ddd; 
    }
    
    * {
