@@ -58,6 +58,7 @@ function exibirNotebooks(notebooks) {
 function adicionarAoCarrinho(notebook) {
     cart.push(notebook);
     localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${notebook.title} foi adicionado ao carrinho!`);
     window.location.href = 'cart.html'; // Redireciona para a página do carrinho
 }
 

@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     displayCartItems(cart);
 
     document.getElementById('checkout-button').addEventListener('click', encerrarCompra);
+    document.getElementById('back-button').addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
 });
 
 function displayCartItems(cart) {
@@ -11,9 +14,17 @@ function displayCartItems(cart) {
 
     let total = 0;
 
-    cart.forEach(item => {
+    cart.forEach((item, index) => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('col-md-4', 'mb-4', 'cart-item');
+
+        const itemImg = document.createElement('img');
+        itemImg.classList.add('card-img-top');
+        itemImg.src = item.thumbnail;
+        itemImg.alt = "Imagem do Produto";
+
+        const itemBody = document.createElement('div');
+        itemBody.classList.add('card-body');
 
         const itemTitle = document.createElement('h5');
         itemTitle.textContent = item.title;
@@ -21,8 +32,16 @@ function displayCartItems(cart) {
         const itemPrice = document.createElement('p');
         itemPrice.textContent = `Preço: R$ ${item.price.toFixed(2)}`;
 
-        itemElement.appendChild(itemTitle);
-        itemElement.appendChild(itemPrice);
+        const removeButton = document.createElement('button');
+        removeButton.classList.add('btn', 'btn-danger');
+        removeButton.textContent = 'Remover';
+        removeButton.onclick = () => removeFromCart(index);
+
+        itemBody.appendChild(itemTitle);
+        itemBody.appendChild(itemPrice);
+        itemBody.appendChild(removeButton);
+        itemElement.appendChild(itemImg);
+        itemElement.appendChild(itemBody);
         cartItemsContainer.appendChild(itemElement);
 
         total += item.price;
@@ -30,6 +49,13 @@ function displayCartItems(cart) {
 
     const cartTotal = document.getElementById('cart-total');
     cartTotal.textContent = `Total: R$ ${total.toFixed(2)}`;
+}
+
+function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCartItems(cart);
 }
 
 function encerrarCompra() {
