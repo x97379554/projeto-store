@@ -43,6 +43,8 @@ function exibirNotebooks(notebooks) {
         comprarButton.classList.add('btn', 'btn-primary');
         comprarButton.textContent = 'Adicionar ao Carrinho';
         comprarButton.onclick = () => adicionarAoCarrinho(notebook);
+        // mudar a cor do button
+        comprarButton.style.backgroundColor = 'orange';
 
         cardBody.appendChild(cardTitle);
         cardBody.appendChild(cardPrice);
@@ -50,7 +52,14 @@ function exibirNotebooks(notebooks) {
         card.appendChild(cardImg);
         card.appendChild(cardBody);
 
-        // Adiciona o card ao row
+       // mudar a cor do button
+        if (notebook.price < 2000) {
+            comprarButton.style.backgroundColor = 'blue';
+            comprarButton.disabled = true;
+            comprarButton.textContent = 'Adicionado';
+        }
+
+        // Adiciona o card ao container de notebooks
         row.appendChild(card);
     });
 }
