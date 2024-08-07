@@ -22,10 +22,11 @@ body {
 /* Header */
 header {
     background-color: var(--cor1);
-    padding: 2rem 0;
+    padding: 2rem ;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 38px;
 }
 
 .logo {
@@ -148,6 +149,26 @@ footer a {
 
 footer a:hover {
     color: var(--cor4);
+}
+
+.fixed-images {
+    position: fixed;
+    right: 0;
+    top: 80%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed-images img {
+    margin-bottom: 3rem; 
+    height: auto;
+}
+#cap{
+    width: 100px;
+}
+#wha{
+    width: 100px;
 }
 
 /* Media Queries */
